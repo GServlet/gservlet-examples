@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Images upload Servlet</title>
+        <style type="text/css">
+          #list {
+          	padding: 10px;
+    		display: inline-block;
+    		margin: 15px;
+          }
+          #list span {
+          	margin: 15px;
+          }
+          input {
+          	border: 1px solid #d4d8d8;
+          }
+        </style>
+        <script>
+            function readFilesAndDisplayPreview(files) {
+                let imageList = document.querySelector('#list'); 
+                imageList.innerHTML = "";
+                for ( let file of files ) {
+                    let reader = new FileReader();      
+                    reader.addEventListener( "load", function( event ) {
+                        let span = document.createElement('span');
+                        span.innerHTML = '<img height="60" src="' + event.target.result + '" />';
+                        imageList.appendChild( span );
+                    });
+                    reader.readAsDataURL(file);
+                }
+            }
+        </script>
+    </head>
+    <body style="text-align: center">
+        
+        <header>
+            <h1>Images upload</h1>
+        </header>
+        
+        <form method="post" action="upload" enctype="multipart/form-data">
+            Files : 
+            <input type="file" name="multiPartServlet" accept="image/*" multiple
+                   onchange="readFilesAndDisplayPreview(this.files);" />
+            <input type="submit" value="Upload" /> <br/>        
+            
+            <div id="list"></div>   
+        </form>
+    </body>
+</html>
