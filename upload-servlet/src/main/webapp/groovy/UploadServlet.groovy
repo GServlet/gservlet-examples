@@ -1,6 +1,6 @@
 import org.gservlet.annotation.InitParam
 import org.gservlet.annotation.Servlet
-import javax.servlet.annotation.MultipartConfig
+import jakarta.servlet.annotation.MultipartConfig
 
 @Servlet( urlPatterns = "/upload",
 initParams = [
