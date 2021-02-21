@@ -10,7 +10,7 @@
 		<dependency>
 			<groupId>org.gservlet</groupId>
 			<artifactId>gservlet-api</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
