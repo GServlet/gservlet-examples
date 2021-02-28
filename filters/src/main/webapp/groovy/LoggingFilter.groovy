@@ -9,10 +9,10 @@ class LoggingFilter {
 
 	void filter() {
 		request.parameterNames.each { name ->
-			logger.info("$request.remoteAddr : Request Param : {$name=$request[name]}")
+			logger.info("Request Param : {$name=$request[name]}")
 		}
 		request.cookies.each { cookie ->
-			logger.info("$request.remoteAddr : Cookie : {$cookie.name=$cookie.value}")
+			logger.info("Cookie : {$cookie.name=$cookie.value}")
 		}
 		next()
 	}
