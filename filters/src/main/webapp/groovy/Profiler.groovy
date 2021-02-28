@@ -10,8 +10,8 @@ public class Profiler {
             long time = System.currentTimeMillis()
             next()
             time = System.currentTimeMillis() - time
-            System.out.println("Time taken for request to complete:  ${time}ms")
-            System.out.println("Request url : $request.requestURL")
+            println("Time taken for request to complete:  ${time}ms")
+            println("Request url : $request.requestURL")
         } else {
             next()
         }
