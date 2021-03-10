@@ -6,7 +6,7 @@ import org.gservlet.annotation.ContextListener
 class ServletContextListener {
 
 	void contextInitialized() {
-	   logger.info("context started")
+	   logger.info("context started on $context.contextPath")
 	}
 
 	void contextDestroyed() {
