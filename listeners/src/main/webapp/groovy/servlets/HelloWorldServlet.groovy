@@ -26,7 +26,7 @@ class HelloWordServlet {
 		session.invalidate()
 		html.html {
 			body {
-				p("Hello World!")
+				p("Handling Events With GServlets!")
 			}
 		}
 	}
