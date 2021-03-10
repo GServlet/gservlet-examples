@@ -6,7 +6,7 @@ import org.gservlet.annotation.ContextListener
 class ServletContextListener {
 
 	void contextInitialized() {
-	   logger.info("context started on $context.getRealPath('/')")
+	   logger.info("context started")
 	}
 
 	void contextDestroyed() {
