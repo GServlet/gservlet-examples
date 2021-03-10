@@ -17,12 +17,12 @@ class HelloWordServlet {
 		session.attr = "test"
 		session.removeAttribute("attr")
 		session.test = "test"
-		println "session id " + session.id
+		logger.info("session id $session.id")
 		HttpSessionBindingListener data = new HttpSessionBindingListener()
 		session.data = data;
 		session.removeAttribute("data")
 		request.changeSessionId()
-		println "session id " + session.id
+		logger.info("session id $session.id")
 		session.invalidate()
 		html.html {
 			body {
